@@ -57,3 +57,6 @@ display: flex;
 gap: 10px;
 }
 
+.modal-body textarea {
+    resize: none;
+ }
