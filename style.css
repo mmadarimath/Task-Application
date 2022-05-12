@@ -24,7 +24,21 @@ body{
     border-radius: 5px;
 }
 
-i{
+#addNew i{
     background-color: #e3d4c7;
     padding: 3px 5px;
+}
+
+#tasks i{
+    background-color: #e3d4c7;
+    padding: 3px 5px;
+    position: relative;
+    left: 215px;
+}
+
+#tasks div{
+    background-color: #F4ECE6;
+    padding: 15px;
+    border-radius: 2px;
+    margin-top: 15px;
 }
