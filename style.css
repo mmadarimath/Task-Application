@@ -13,6 +13,7 @@ body{
     border-radius: 8px;
     padding: 30px;
     box-shadow: 2px 2px 2px 2px rgba(255, 241, 241, 0.1);
+    overflow-y: scroll;
 }
 
 #addNew {
@@ -59,4 +60,8 @@ gap: 10px;
 
 .modal-body textarea {
     resize: none;
+ }
+
+ #warn{
+     color: red;
  }
