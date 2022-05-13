@@ -4,7 +4,7 @@ let dateInput = document.getElementById('date-input');
 let textarea = document.getElementById('textarea');
 let warn = document.getElementById('warn');
 let tasks = document.getElementById('tasks');
-
+let add = document.getElementById('add');
 
 
 
@@ -22,19 +22,29 @@ let formValidation = function(){
     else{
         console.log('Successful');
         warn.innerHTML = "";
-        textInput.value = "";
+        // textInput.value = "";
         acceptData();
-        
+        add.setAttribute('data-bs-dismiss', 'modal');
+        add.click();
+
+        (function(){
+            add.setAttribute('data-bs-dismiss', '');
+        })();
     }
 };
 
-let data = {};
+let data = [];
 
 let acceptData = function(){
-    data["text"] = textInput.value;
-    data["date"] = dateInput.value;
-    data["desciption"] = textarea.value;
-    // console.log(data);
+    data.push({
+        text: textInput.value,
+        date: dateInput.value,
+        desciption: textarea.value,
+})
+
+    localStorage.setItem("data", JSON.stringify(data));
+   
+    console.log(data);
     createTasks();
 }
 
@@ -45,8 +55,29 @@ let createTasks =  function(){
     <p>${data.desciption}</p>
     
     <span class="options">
-        <i class="fa-regular fa-pen-to-square"></i>
-        <i class="fa-regular fa-trash-can"></i>
+        <i onClick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-regular fa-pen-to-square"></i>
+        <i onClick = "deleteTask(this)" class="fa-regular fa-trash-can"></i>
     </span>
 </div>`;
+resetForm();
 };
+
+let deleteTask = function(e){
+    e.parentElement.parentElement.remove();
+};
+
+let editTask =  function(e){
+   let selectedTask = e.parentElement.parentElement;
+
+
+   textInput.value = selectedTask.children[0].innerHTML;
+   dateInput.value = selectedTask.children[1].innerHTML;
+   textarea.value = selectedTask.children[2].innerHTML;
+}; 
+
+let resetForm = () => {
+    textInput.value = "";
+    dateInput.value = "";
+    textarea.value = "";
+}
+

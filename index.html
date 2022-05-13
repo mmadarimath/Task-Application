@@ -24,7 +24,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+          <h5 class="addNewTask" id="addNewTask">Add New Task</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -42,7 +42,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" id="add" class="btn btn-primary">Add</button>
         </div>
       </div>
     </div>
@@ -54,8 +54,8 @@
                 <span class="small text-secondary">15-05-2022</span>
                 <p>Follow up regarding Interview.</p>
                 <span class="options">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <i class="fa-regular fa-trash-can"></i>
+                    <i onClick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-regular fa-pen-to-square"></i>
+                    <i onClick = "deleteTask(this)"  class="fa-regular fa-trash-can"></i>
                 </span>
             </div>
             <div>
@@ -63,8 +63,8 @@
                 <span class="small text-secondary">13-05-2022</span>
                 <p>Going to the Gym.</p>
                 <span class="options">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <i class="fa-regular fa-trash-can"></i>
+                    <i onClick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-regular fa-pen-to-square"></i>
+                    <i onClick = "deleteTask(this)" class="fa-regular fa-trash-can"></i>
                 </span>
             </div>
 
