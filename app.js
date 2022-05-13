@@ -81,3 +81,6 @@ let resetForm = () => {
     textarea.value = "";
 }
 
+(() => {
+   data = localStorage.getItem("data");
+})();
