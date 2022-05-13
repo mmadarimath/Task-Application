@@ -33,15 +33,12 @@ let formValidation = function(){
     }
 };
 
-let data = [{}];
+let data = {};
 
 let acceptData = function(){
-    data.push({
-        text: textInput.value,
-        date: dateInput.value,
-        desciption: textarea.value,
-})
-       localStorage.setItem("data", JSON.stringify(data));
+    data["text"] = textInput.value;
+    data["date"] = dateInput.value;
+    data["desciption"] = textarea.value;
     // console.log(data);
     createTasks();
 }
