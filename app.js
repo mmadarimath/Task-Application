@@ -33,7 +33,7 @@ let formValidation = function(){
     }
 };
 
-let data = [];
+let data = [{}];
 
 let acceptData = function(){
     data.push({
@@ -41,10 +41,8 @@ let acceptData = function(){
         date: dateInput.value,
         desciption: textarea.value,
 })
-
-    localStorage.setItem("data", JSON.stringify(data));
-   
-    console.log(data);
+       localStorage.setItem("data", JSON.stringify(data));
+    // console.log(data);
     createTasks();
 }
 
@@ -81,6 +79,3 @@ let resetForm = () => {
     textarea.value = "";
 }
 
-(() => {
-   data = localStorage.getItem("data");
-})();
