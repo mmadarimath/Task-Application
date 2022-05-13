@@ -68,11 +68,11 @@ gap: 10px;
 
  ::-webkit-scrollbar{
      background-color: #F4ECE6;
-     width: 5px;
+     width: 0px;
      height: 100%;
  }
 
- ::-webkit-scrollbar-button{
+ /* ::-webkit-scrollbar-button{
      background-color: #e3d4c7;;
  }
 
@@ -81,4 +81,4 @@ gap: 10px;
  }
  ::-webkit-scrollbar-corner{
      border-radius: 10px;
- }
+ } */

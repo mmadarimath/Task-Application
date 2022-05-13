@@ -39,7 +39,7 @@ let acceptData = function(){
 }
 
 let createTasks =  function(){
-    tasks.innerHTML += ` <div>
+    tasks.innerHTML += `<div>
     <span class="fw-bold">${data.text}</span>
     <span class="small text-secondary">${data.date}</span>
     <p>${data.desciption}</p>
