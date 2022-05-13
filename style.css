@@ -65,3 +65,20 @@ gap: 10px;
  #warn{
      color: red;
  }
+
+ ::-webkit-scrollbar{
+     background-color: #F4ECE6;
+     width: 5px;
+     height: 100%;
+ }
+
+ ::-webkit-scrollbar-button{
+     background-color: #e3d4c7;;
+ }
+
+ ::-webkit-scrollbar-thumb{
+     background-color: #e3d4c7;;
+ }
+ ::-webkit-scrollbar-corner{
+     border-radius: 10px;
+ }
