@@ -1,3 +1,3 @@
 # Task-Application
 
-CRUD Operations with Bootstrap and Custom CSS
+CRUD Operations with Bootstrap, custom CSS and Vanilla JS
